@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
-    "export": "cross-env EXPORT=true next build",
-    "pub": "npm run export && gh-pages -d out",
+    "export-gh-pages": "rm -rf out && cross-env TARGET=gh-pages next build",
+    "only-pub": "gh-pages -d out",
+    "pub": "npm run export-gh-pages && cp .nojekyll out && gh-pages -d out",
+    "export": "rm -rf out && cross-env EXPORT=true next build",
     "serve": "serve out -p 4001",
     "start": "next start",
     "lint": "next lint"

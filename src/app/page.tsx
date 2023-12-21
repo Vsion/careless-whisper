@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Metadata } from 'next';
 import styles from './styles.module.css';
-import Eren from '../../public/Eren.jpg';
+import { basePath } from '../../public/constants';
 
 // const styles = {}
 
@@ -12,7 +12,8 @@ export default function Index() {
       <div className={'container'}>
         <img
           className={styles.logo}
-          src={'/Eren.jpg'}
+          src={basePath + '/Eren.jpg'}
+          // src={'/Eren.jpg'}
           alt="艾伦"
           width={320}
           height={320}
