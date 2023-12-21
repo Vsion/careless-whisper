@@ -1,0 +1,1 @@
+exports.basePath = process.env.EXPORT === 'true' ? '/careless-whisper' : ''
