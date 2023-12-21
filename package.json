@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
+    "export": "cross-env EXPORT=true next build",
+    "pub": "npm run export && gh-pages -d out",
+    "serve": "serve out -p 4001",
     "start": "next start",
     "lint": "next lint"
   },
@@ -27,8 +30,11 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "cross-env": "^7.0.3",
     "eslint": "^8",
     "eslint-config-next": "14.0.4",
+    "gh-pages": "^6.1.0",
+    "serve": "^14.2.1",
     "typescript": "^5"
   }
 }

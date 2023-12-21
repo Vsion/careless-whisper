@@ -2,13 +2,7 @@
 
 import Content from './content.mdx';
 
-export default () => {
-  try {
-    console.log('Content', Content)
-
-  } catch (e) {
-    console.dir(e)
-  }
+export default function meditation() {
   return <>
     <div className={'container md'}>
       <Content />
