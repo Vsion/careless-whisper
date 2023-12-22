@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import classnames from 'classnames';
 import Header from '../components/Header';
 import '../assets/style/global.css';
+import { basePath } from '@/../public/constants';
 
 export const metadata: Metadata = {
   title: 'Careless Whisper | Vsion',
@@ -18,6 +19,8 @@ export default function Layout({
 }) {
   return (
     <html lang="en">
+      {/* fix gh-pages icon */}
+      <link rel="shortcut icon" type="image/x-icon" href={basePath + '/favicon.ico'} />
       <body>
         <Header />
         <div className={classnames(inter.className, 'page')}>{children}</div>  

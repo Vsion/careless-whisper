@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import styles from './styles.module.css';
-import { basePath } from '../../public/constants';
+import { basePath } from '@/../public/constants';
 
 // const styles = {}
 
