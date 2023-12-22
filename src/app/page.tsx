@@ -1,6 +1,4 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { Metadata } from 'next';
 import styles from './styles.module.css';
 import { basePath } from '../../public/constants';
 

@@ -4,9 +4,6 @@ const withMDX = require('@next/mdx')({
 });
 const basePath = require('./public/constants.js').basePath;
 
-console.log('basePath', basePath)
-console.log('assetPrefix', process.env.TARGET === 'gh-pages' ? basePath + '/' : undefined)
-
 module.exports = withMDX(withLess({
   output: process.env.TARGET === 'gh-pages' ||
     process.env.EXPORT === 'true' ? 'export' : undefined,
