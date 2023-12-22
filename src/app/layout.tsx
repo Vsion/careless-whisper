@@ -1,14 +1,15 @@
 'use client';
 
 import { Inter } from 'next/font/google';
+import { Metadata } from 'next';
 import classnames from 'classnames';
 import Header from '../components/Header';
 import '../assets/style/global.css';
 
-// export const metadata: Metadata = {
-//   title: 'Careless Whisper | Vsion',
-//   description: 'sui-sui-nian',
-// }
+export const metadata: Metadata = {
+  title: 'Careless Whisper | Vsion',
+  description: 'sui-sui-nian',
+}
 
 const inter = Inter({ subsets: ['latin'] })
 
