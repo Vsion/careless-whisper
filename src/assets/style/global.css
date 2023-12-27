@@ -99,7 +99,7 @@ body {
 
 .page {
   padding: 1.5rem 6rem;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
 }
 
 .md.container {
