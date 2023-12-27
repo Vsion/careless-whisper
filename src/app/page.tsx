@@ -37,6 +37,15 @@ export default function Index() {
           </h2>
           <p>项目代码管理方式对比: 多仓库多模块应用 vs 单仓库多模块应用</p>
         </Link>
+        <Link
+          href="/md/enhance-cognition"
+          className={styles.card}
+        >
+          <h2>
+           Enhance cognition <span>-&gt;</span>
+          </h2>
+          <p>如何提升认知</p>
+        </Link>
       </div>
     </>
   )

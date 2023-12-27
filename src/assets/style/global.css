@@ -108,6 +108,36 @@ body {
   padding-right: calc(1.25rem + 115px);
 }
 
+.md h1,
+.md h2,
+.md h3,
+.md h4,
+.md h5,
+.md h6 {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+.md p {
+  margin-bottom: 1.25em;
+}
+
+.md ul li {
+  padding-left: 1.5rem;
+  list-style: none;
+  position: relative;
+}
+.md ul li::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  left: 0.5rem;
+  top: 0.6rem;
+}
+
 .container {
   position: relative;
   padding: 2rem 0;
@@ -130,14 +160,14 @@ body {
   z-index: -1;
 }
 
-.container::before,
+/* .container::before,
 .container::after {
   content: '';
   left: 50%;
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
-}
+} */
 
 a {
   color: inherit;
