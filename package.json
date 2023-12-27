@@ -6,7 +6,7 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "export-gh-pages": "rm -rf out && cross-env TARGET=gh-pages next build",
-    "only-pub": "gh-pages -d out",
+    "only-pub": "gh-pages -d out --nojekyll",
     "pub": "npm run export-gh-pages && gh-pages -d out --nojekyll",
     "export": "rm -rf out && cross-env EXPORT=true next build",
     "serve": "serve out -p 4001",
