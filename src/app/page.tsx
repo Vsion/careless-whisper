@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import styles from './styles.module.css';
 import { basePath } from '@/../public/constants';
 
@@ -9,7 +8,7 @@ export default function Index() {
   return (
     <>
       <div className={'container'}>
-        <Image
+        <img
           className={styles.logo}
           src={basePath + '/Eren.jpg'}
           // src={'/Eren.jpg'}
