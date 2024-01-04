@@ -1,0 +1,123 @@
+import { Prism as Editor } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+
+## github/gitlab同时管理多个ssh key
+
+### 生成 ssh key
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`¥ cd \\.\\Users\\\[username\]\\.ssh\ 
+¥ ssh ssh-keygen -t rsa -C "youremail@yourcompany.com"`}
+</Editor>
+
+### 同理生成个人邮箱 ssh key (for github)
+
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`~\\.ssh 
+¥ ssh-keygen -t rsa -C "youremail@personal.com"
+
+Generating public/private rsa key pair.
+Enter file in which to save the key (C:\\Users\\[user]/.ssh/id_rsa): id_rsa_test
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in id_rsa_test.
+Your public key has been saved in id_rsa_test.pub.
+The key fingerprint is:
+SHA256:C155hCQy9TQZme0JcihWJWwKU7EBvgfqywcsD3Glmas youremail@personal.com
+The key's randomart image is:
++---[RSA 3072]----+
+|  .o*==o**       |
+| .o +==**o.      |
+|  oO.+ ooo..     |
+|..=o.    oo      |
+|oo... . S .      |
+|+o.. . o o       |
+|.=.   . .        |
+|E o.             |
+| o.              |
++----[SHA256]-----+
+
+ ~\\.ssh 
+¥ ls
+config  id_rsa  id_rsa.pub  id_rsa_github  id_rsa_github.pub  known_hosts  id_rsa_test  id_rsa_test.pub
+`}
+</Editor>
+
+生成 **id_rsa_test**, **id_rsa_test.pub** 文件, 首次创建可以不输入名称, 默认为 **id_rsa**, 之后再创建不输入名称会 **覆盖 id_rsa**
+
+### 添加私钥
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`¥ ssh-add ~/.ssh/id_rsa
+¥ ssh-add ~/.ssh/id_rsa_github`}
+</Editor>
+
+### 配置文件
+在 ~/.ssh 目录下新建一个 config 文件
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`¥ touch config`}
+</Editor>
+
+输入
+<Editor
+  language="config"
+  style={oneDark}
+  showLineNumbers
+>
+{`# gitlab
+Host gitlab.company.com
+    HostName gitlab.company.com
+    Port 50022
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+# github
+Host github.com
+    HostName github.com
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa_github`}
+</Editor>
+
+### 在 github / gitlab 上添加 ssh key
+查看文件内容, 将文本拷贝到 <a href="https://github.com/settings/ssh" target="_blank">github ssh</a>
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`¥ cat id_rsa_github.pub`}
+</Editor>
+
+显示如下, 即为成功
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`~\\.ssh 
+¥ ssh -T git@github.com
+Hi Vsion! You've successfully authenticated, but GitHub does not provide shell access.
+
+ ~\\.ssh 
+¥ ssh -T git@gitlabcode.21vianet.com
+Welcome to GitLab, @xxx!`}
+</Editor>

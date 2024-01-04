@@ -1,12 +1,14 @@
-import Link from 'next/link';
-import styles from './styles.module.css';
-import { basePath } from '@/../public/constants';
+'use client';
 
-// const styles = {}
+import Link from 'next/link';
+import { useStyles } from './styles';
+import { basePath } from '@/../public/constants';
+import Layout from './md/layout';
 
 export default function Index() {
+  const { styles } = useStyles()
   return (
-    <>
+    <Layout>
       <div className={'container'}>
         <img
           className={styles.logo}
@@ -46,7 +48,16 @@ export default function Index() {
           </h2>
           <p>如何提升认知</p>
         </Link>
+        <Link
+          href="/md/ssh-with-accounts"
+          className={styles.card}
+        >
+          <h2>
+           github / gitlab 多账户管理 <span>-&gt;</span>
+          </h2>
+          <p>ssh</p>
+        </Link>
       </div>
-    </>
+    </Layout>
   )
 }

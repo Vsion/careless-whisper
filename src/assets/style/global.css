@@ -169,8 +169,12 @@ body {
   transform: translateZ(0);
 } */
 
+.container pre {
+  margin: 1rem auto 2rem auto !important;
+  width: 1000px;
+}
+
 a {
-  color: inherit;
   text-decoration: none;
 }
 
