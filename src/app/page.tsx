@@ -57,6 +57,15 @@ export default function Index() {
           </h2>
           <p>ssh</p>
         </Link>
+        <Link
+          href="/md/axios"
+          className={styles.card}
+        >
+          <h2>
+            Axios <span>-&gt;</span>
+          </h2>
+          <p>axios vs fetch</p>
+        </Link>
       </div>
     </Layout>
   )

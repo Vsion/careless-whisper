@@ -171,7 +171,7 @@ body {
 
 .container pre {
   margin: 1rem auto 2rem auto !important;
-  width: 1000px;
+  /* width: 1000px; */
 }
 
 a {

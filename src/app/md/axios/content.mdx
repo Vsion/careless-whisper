@@ -1,0 +1,163 @@
+
+import { Prism as Editor } from 'react-syntax-highlighter';
+import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import styles from './index.module.css';
+
+`Axios` 和 `Fetch` 都是在 JavaScript 应用中用来发起 HTTP 请求的流行工具，但它们在功能、语法和可用性方面存在一些差异。
+
+## Axios VS Fetch
+
+<table className={styles.vstable}>
+  <thead>
+    <tr>
+      <th>特点/功能</th>
+      <th>Axios</th>
+      <th>Fetch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>基于</td>
+      <td>Promise</td>
+      <td>Promise</td>
+    </tr>
+    <tr>
+      <td>JSON 处理</td>
+      <td>自动处理 JSON 数据</td>
+      <td>需要手动处理 JSON 数据</td>
+    </tr>
+    <tr>
+      <td>运行环境</td>
+      <td>浏览器和 Node.js</td>
+      <td>浏览器 (原生支持)</td>
+    </tr>
+    <tr>
+      <td>请求/响应拦截</td>
+      <td>支持</td>
+      <td>不支持</td>
+    </tr>
+    <tr>
+      <td>超时设置</td>
+      <td>支持</td>
+      <td>不支持（需要额外处理）</td>
+    </tr>
+    <tr>
+      <td>错误处理</td>
+      <td>更详细的错误信息</td>
+      <td>较基本的错误处理</td>
+    </tr>
+    <tr>
+      <td>请求取消</td>
+      <td>支持</td>
+      <td>支持（使用 AbortController）</td>
+    </tr>
+    <tr>
+      <td>设置 HTTP 头</td>
+      <td>简单易用</td>
+      <td>需要更多配置</td>
+    </tr>
+    <tr>
+      <td>发送/接收 Cookies</td>
+      <td>默认不发送/接收，可配置</td>
+      <td>默认不发送/接收，可配置</td>
+    </tr>
+    <tr>
+      <td>安全性（CSRF/XSRF 防护）</td>
+      <td>内置支持</td>
+      <td>需要手动处理</td>
+    </tr>
+    <tr>
+      <td>使用方式</td>
+      <td>需要安装库</td>
+      <td>浏览器原生支持，无需安装额外库</td>
+    </tr>
+    <tr>
+      <td>数据传输进度</td>
+      <td>支持</td>
+      <td>不支持</td>
+    </tr>
+  </tbody>
+</table>
+
+### 请求/响应拦截器
+
+在 HTTP 请求的上下文中，请求/响应拦截器是非常强大的功能，它们允许开发者在请求发送到服务器和服务器响应返回到客户端之前，拦截并操作这些请求和响应。Axios 和 Fetch 在这方面的支持程度不同。
+
+#### Axios 的请求/响应拦截器
+
+Axios 支持请求和响应拦截器，这使得它在处理复杂的 HTTP 通信方面非常灵活和强大。
+
+- **请求拦截器**：在请求被发送到服务器之前，允许你修改请求配置，如设置通用的头部、添加认证信息、日志记录或者在发送请求前执行某些动作。
+  
+  示例：
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`axios.interceptors.request.use(config => {
+    // 修改 config
+    config.headers['Authorization'] = 'Bearer token';
+    return config;
+  }, error => {
+    // 请求错误的处理
+    return Promise.reject(error);
+  });`}
+</Editor>
+
+- **响应拦截器**：在服务器响应到达客户端之前，允许你处理响应数据，如统一处理错误、格式化响应数据等。
+
+  示例：
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`axios.interceptors.response.use(response => {
+    // 处理响应数据
+    return response;
+  }, error => {
+    // 响应错误的处理
+    return Promise.reject(error);
+  });`}
+</Editor>
+
+#### Fetch 的请求/响应拦截器
+
+Fetch API 并不原生支持请求和响应的拦截器。这意味着如果你需要类似的功能，你可能需要手动实现它，或者使用额外的库来提供这种功能。
+
+- 对于请求，你可以在调用 `fetch` 之前手动修改请求参数。
+- 对于响应，你可以在处理 `fetch` 返回的 promise 时添加逻辑来实现类似的效果。
+
+示例（模拟响应拦截器）：
+
+<Editor
+  language="bash"
+  style={oneDark}
+  showLineNumbers
+>
+{`fetch(url)
+  .then(response => {
+    // 检查并处理特定的响应状态
+    if (!response.ok) {
+      throw new Error('Response error');
+    }
+    return response.json();
+  })
+  .then(data => {
+    // 处理数据
+  })
+  .catch(error => {
+    // 错误处理
+  });`}
+</Editor>
+
+#### 响应拦截器 - 总结
+
+Axios 的请求和响应拦截器提供了更多的灵活性和控制力，特别是在构建需要复杂 HTTP 请求处理的应用时。而 Fetch 由于缺乏这种内置支持，使用起来在某些复杂场景下可能不够方便。在选择适合的工具时，这可能是一个重要的考虑因素。
+
+### 总结 - 选择使用哪个
+- 如果你需要更多的内置功能，比如取消请求、拦截器或自动转换 JSON，Axios 是一个好选择。
+- 如果你倾向于使用原生 API 并且不介意编写额外的配置或封装，或者你的项目是一个轻量级的或不需要额外依赖的项目，Fetch 是一个不错的选择。

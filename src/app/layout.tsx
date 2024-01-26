@@ -5,8 +5,13 @@ import '../assets/style/global.css';
 import { basePath } from '@/../public/constants';
 import classnames from 'classnames';
 
+const APP_DEFAULT_TITLE = 'Careless Whisper by Vsion'
+
 export const metadata: Metadata = {
-  title: 'Careless Whisper | Vsion',
+  title: {
+    default: APP_DEFAULT_TITLE,
+    template: '%s | ' + APP_DEFAULT_TITLE,
+  },
   description: 'sui-sui-nian',
 }
 
