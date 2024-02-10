@@ -3,6 +3,7 @@ const withMDX = require('@next/mdx')({
   extension: /\.mdx?$/,
 });
 const basePath = require('./public/constants.js').basePath;
+const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = withMDX(withLess({
   output: process.env.TARGET === 'gh-pages' ||
@@ -17,4 +18,8 @@ module.exports = withMDX(withLess({
       javascriptEnabled: true,
     },
   },
+  images: {
+    unoptimized: !isProd,
+  },
+  reactStrictMode: isProd,
 }));

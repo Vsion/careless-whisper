@@ -2,6 +2,9 @@
   --max-width: 1200px;
   --max-md-width: 48rem;
   --border-radius: 12px;
+  --font-color-1: rgba(0, 0, 0, 0.85);
+  --font-color-2: rgba(0, 0, 0, 0.65);
+  --font-color-3: rgba(0, 0, 0, 0.45);
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -182,4 +185,8 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+p.date {
+  color: var(--font-color-2);
 }

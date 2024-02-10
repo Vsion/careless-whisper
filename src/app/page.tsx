@@ -66,6 +66,15 @@ export default function Index() {
           </h2>
           <p>axios vs fetch</p>
         </Link>
+        <Link
+          href="/md/react-vs-vue"
+          className={styles.card}
+        >
+          <h2>
+            React vs Vue <span>-&gt;</span>
+          </h2>
+          <p>which is the best ?</p>
+        </Link>
       </div>
     </Layout>
   )

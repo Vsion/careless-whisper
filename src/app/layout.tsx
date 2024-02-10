@@ -26,13 +26,13 @@ export default function Layout({
     <html lang="en">
       {/* fix gh-pages icon */}
       <link rel="shortcut icon" type="image/x-icon" href={basePath + '/favicon.ico'} />
-      <body>
+      <body suppressHydrationWarning={true}>
         <Header />
         <div className={classnames(inter.className, 'page')}>
           {children}
-        </div>  
+        </div>
       </body>
     </html>
-    
+
   )
 }
