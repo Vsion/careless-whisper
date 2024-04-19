@@ -11,6 +11,7 @@ const theme_props: ThemeProviderProps = {
   },
   theme: {
     token: {
+      fontSize: 16,
       colorPrimary,
       colorLink: colorPrimary,
     },
