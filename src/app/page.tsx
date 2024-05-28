@@ -75,6 +75,15 @@ export default function Index() {
           </h2>
           <p>which is the best ?</p>
         </Link>
+        <Link
+          href="/md/fe-projects"
+          className={styles.card}
+        >
+          <h2>
+            前端项目介绍 <span>-&gt;</span>
+          </h2>
+          <p>vsion.ren@tenxcloud.com</p>
+        </Link>
       </div>
     </Layout>
   )

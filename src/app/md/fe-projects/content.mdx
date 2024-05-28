@@ -1,0 +1,440 @@
+## tenx 前端项目介绍
+
+### 1. [user-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal)
+TCE 底座项目，前端启动 node 服务，通过中间层调用 api-server。
+
+**前端框架**: react@v15
+
+**UI**: antd@1.x
+
+**状态**: redux@3.x
+
+**构建工具**: webpack
+
+**代码检查**: eslint + prettier + husky + lint-staged (./client)
+
+**node**: koa + redis
+
+**其他**: 
+  - [版本/分支对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [环境变量说明](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AF%B4%E6%98%8E)
+  - [文件目录说明](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal#%E5%89%8D%E7%AB%AF%E7%A7%81%E6%9C%89%E4%BA%91%E5%85%AC%E6%9C%89%E4%BA%91%E5%88%A4%E6%96%AD)
+  - [submodule 说明](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal#%E6%9B%B4%E6%96%B0-submodule)
+  - [pnpm 替代 yarn](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal/-/commit/79a4be7d9637c3b0472146a5dca129bcbe5d8997)
+  - [dev-branch-react](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal/-/tree/dev-branch-react?ref_type=heads): 21年开始维护, react, antd 等版本升级 同步更新最新业务, 未测试
+
+### 2. [devops-manager-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tdevops/devops-manager-portal)
+根据农信银客户需求, 新增项目 devops-manager-portal, 包括 hosts, nexus, gitlab, svn, wiki 等功能。
+
+**前端框架**: react@17, umijs@v4
+
+**UI**: antd@4.x
+
+**状态**: dva
+
+**构建工具**: umi
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本/分支对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tce/user-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [文件目录说明](https://gitlabcode.21vianet.com/vnet/aimaas/tdevops/devops-manager-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+
+### 3. [dev-flows-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tdevops/devops-manager-portal)
+包括 devops 基础功能, 流水线, 任务, 模板, CICD 概览, 需求管理, 交付管理, 团队度量, 研发质量, 测试管理等功能。
+
+**前端框架**: react@17, umi@v3
+
+**UI**: antd@4.x
+
+**状态**: dva
+
+**构建工具**: umi
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本/分支对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tdevops/dev-flows-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [文件目录说明](https://gitlabcode.21vianet.com/vnet/aimaas/tdevops/dev-flows-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+
+
+### 4. [serviceinsight-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitoring/serviceinsight-portal)
+自定义监控功能, 前端 + bff。
+
+**前端框架**: react@17, umi@v4
+
+**UI**: antd@4.x
+
+**状态**: dva
+
+**构建工具**: umi 
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+
+### 5. [shared-configs](https://gitlabcode.21vianet.com/zhang.pengcheng3/shared-configs)
+user-portal 菜单, submodule。
+
+**前端框架**: tsx 静态文件, 导出菜单 json + tsx
+
+### 6. [shared](https://gitlabcode.21vianet.com/zhang.pengcheng3/shared)
+bff sdk, sdk global less, 菜单生成工具。
+
+**其他**:
+  - [bff-sdk](https://gitlabcode.21vianet.com/zhang.pengcheng3/shared/-/tree/dev-branch/bff-client-sdk?ref_type=heads#bff-client-sdk)
+  - [global less](https://gitlabcode.21vianet.com/zhang.pengcheng3/shared/-/tree/dev-branch/less?ref_type=heads)
+  - [menu-generator](https://gitlabcode.21vianet.com/zhang.pengcheng3/shared/-/tree/dev-branch/menu-generator?ref_type=heads#menu-generator)
+  
+### 7. [bff-sercer](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/bff-server)
+包括 devops 基础功能, 流水线, 任务, 模板, CICD 概览, 需求管理, 交付管理, 团队度量, 研发质量, 测试管理等功能。
+
+**node 框架**: nextjs@9, node > 18.12
+
+**构建工具**: nestjs
+
+**代码检查**: eslint + prettier + husky + lint-staged
+
+**其他**: 
+  - [版本/分支对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/bff-server#bff-server)
+  - [oidc 对接](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/bff-server#oidc-%E5%AF%B9%E6%8E%A5)
+  - [dev app](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/bff-server#develop-the-app)
+
+
+### 8. [dock-app](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/dock-app)
+微前端基座应用（主应用）。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5.x
+
+**状态**: dva
+
+**构建工具**: umi 
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+### 9. [app-stack-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/app-stack-portal)
+user-portal 老项目维护困难, 新增 app-stack 项目, 功能包括堆栈/堆栈模板/堆栈设计器, 重构应用/服务/部署/operator/存储/联邦集群资源等功能。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@4.x
+
+**状态**: dva
+
+**构建工具**: umi
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本/分支对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tce/app-stack-portal/-/tree/dev-branch?ref_type=heads#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [文件目录说明](https://gitlabcode.21vianet.com/vnet/aimaas/tce/app-stack-portal/-/tree/dev-branch?ref_type=heads#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  - [样式示例](https://gitlabcode.21vianet.com/vnet/aimaas/tce/app-stack-portal/-/tree/dev-branch?ref_type=heads#%E5%B8%B8%E8%A7%81%E6%A0%B7%E5%BC%8F%E4%B9%A6%E5%86%99)
+
+### 10. [tenx-ui](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/tenx-ui)
+老项目中(低版本组件)开发的私有组件, 发布到私有仓库中。
+
+**业务组件**:
+  - @tenx-ui/monitor-charts@1.0.0-beta.1: 监控图标基础组件, 基于 bizcharts@4, 抽象自己的 api，保证后续升级的兼容性, 将项目中使用 bizcharts 的替换为新的组件
+  - @tenx-ui/resourcebanner@7.0.3: 各资源页面顶部显示配额 Banner
+  - @tenx-ui/terminals@1.6.0: 容器终端, websocket
+  - @tenx-ui/b-unified-navigation@8.1.0: 低版本 tce 菜单
+
+**通用组件**:
+  - @tenx-ui/tabs@0.0.7: 基于 antd Tabs 组件，主要增加了使用url跳转至具体子tab下。ps: 支持BrowserRouter、HashRouter
+  - @tenx-ui/config-provider@1.0.0: 为了兼容 tenx-ui 组件的国际化方案，需要在项目跟组件外面包个 config-provider，同时也可以配置一些全局配置
+  - @tenx-ui/editor@3.0.2-beta.1: 代码编辑器, 2.1.0版本及以后注意如需要定位样式, 要传一个props为wrapClassName.
+  - @tenx-ui/ellipsis@0.0.8: Ellipsis 组件, 当hover时, 展示Tooltip
+  - @tenx-ui/icon@2.4.45: 语义化的矢量图形，用法与 antd icon 一致, 语义化的命名，统一采用大驼峰的命名方式。
+  - @tenx-ui/img-link@1.0.0: img-link 组件， 点击图片在新的页面打开
+  - @tenx-ui/infobox@1.0.0: InfoBox 组件，用于统一的提示性语句，可根据props中的style，icon自由变换内容。
+
+### 11. [cmic-newtech-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/cmic-newtech-portal)
+cmic 四期, 新技术孵化平台, 参考 asset-portal。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5
+
+**状态**: dva
+
+**构建工具**: umi
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/customization-project/cmic-newtech-portal#%E5%BC%80%E5%8F%91%E6%9E%84%E5%BB%BA)
+
+### 12. [unified-navigation](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/unified-navigation/-/tree/dev-branch?ref_type=heads)
+新的统一导航组件最大的变化是把菜单配置放到了 submodule 中维护，这样就可以将经常需要变更的部分（菜单配置）与不变的部分（导航通用逻辑）分离开，这样可以降低导航组件的维护成本，不同版本的产品只需要在 shared-configs 项目中建个新分支，然后在 menus 中直接改菜单即可。, tce v5.4 以上对应此项目, 部分重构。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5
+
+**状态**: dva
+
+**构建工具**: father-build
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [into](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/unified-navigation/-/tree/dev-branch?ref_type=heads#%E4%BB%8B%E7%BB%8D)
+  - [版本对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/unified-navigation/-/tree/dev-branch?ref_type=heads#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+
+### 13. [alert-mgr-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitoring/alert-mgr-portal)
+告警独立部署 Management portal for various alerts, can be used for other products for alert requirements。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5
+
+**状态**: dva
+
+**构建工具**: father-build
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitoring/alert-mgr-portal#%E5%BC%80%E5%8F%91%E6%9E%84%E5%BB%BA)
+
+
+### 14. [inspector-portal](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/inspector-portal)
+平台巡检能力支持, 产品层面增加内置巡检规则, 全局巡检对象:集群、节点、平台、harbor以及安全, 项目巡检对象: 应用、中间件。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5
+
+**状态**: dva
+
+**构建工具**: father-build
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [巡检项](http://wiki.tenxcloud.21vianet.com/pages/viewpage.action?pageId=26973642)
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/inspector-portal#%E5%BC%80%E5%8F%91%E6%9E%84%E5%BB%BA)
+
+### 15. [monitor-panel-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitor-panel-portal)
+tce 监控与告警业务项目, 包括: 应用告警/事件管理/系统监控/系统告警等功能。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5
+
+**状态**: dva
+
+**构建工具**: umi
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitor-panel-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [目录结构](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitor-panel-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  - [错误处理](https://gitlabcode.21vianet.com/vnet/aimaas/tce/monitor-panel-portal#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86-)
+
+### 16. [app-backup-restore](https://gitlabcode.21vianet.com/vnet/aimaas/tce/advanced-components/app-backup-restore)
+平台应用备份: 对象存储仓库管理, 备份计划, 备份任务, 恢复等功能。
+
+**前端框架**: react@18, umi@v4
+
+**UI**: antd@5
+
+**状态**: dva
+
+**构建工具**: umi
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/tce/advanced-components/app-backup-restore#%E5%BC%80%E5%8F%91%E6%9E%84%E5%BB%BA)
+
+  
+### 17. [haixin-import-data](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/haixin-import-data)
+
+海信网格，租户等老数据迁移脚本
+
+**其他**: 
+  - [导入数据](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/haixin-import-data#%E5%AF%BC%E5%85%A5%E5%8E%86%E5%8F%B2%E6%95%B0%E6%8D%AE%E7%A7%9F%E6%88%B7%E9%A1%B9%E7%9B%AE)
+
+### 18. [app-backup-restore](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/yunti/yunti-lowcode-engine)
+阿里lowcode-engine生态项目，基于 antd 和 formily 组件库实现，包括 plugins、setters 和 materials。
+
+**前端框架**: react@18, umi@v4, @alilc/lowcode-types
+
+**UI**: antd@5
+
+**发布**: npm
+
+**构建工具**: @alib/build-scripts
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/yunti/yunti-lowcode-engine#%E5%BC%80%E5%8F%91)
+
+
+### 19. [events-and-monitoring](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/events-and-monitoring)
+事件和监控组件: 不同资源下事件和监控统一业务组件: Node, Pod, Volume, StatefulSet, DaemonSet, Job, CronJob, CSV, ReplicaSet等。
+
+**前端框架**: react@16
+
+**UI**: antd@3
+
+**发布**: npm
+
+**构建工具**: father@2.x
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [参数](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/events-and-monitoring#%E5%8F%82%E6%95%B0)
+  - [支持类型](https://gitlabcode.21vianet.com/vnet/aimaas/contrib/tenx-ui/events-and-monitoring#events)
+
+### 20. [asset-portal](https://gitlabcode.21vianet.com/vnet/aimaas/asset-store/asset-portal/-/tree/dev-branch?ref_type=heads)
+后台管理+公有云部署的云市场页面。
+
+**前端框架**: react@16, egg@2
+
+**UI**: antd@4
+
+**构建工具**: umi@3.x
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [环境变量](https://gitlabcode.21vianet.com/vnet/aimaas/asset-store/asset-portal/-/tree/dev-branch?ref_type=heads#%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F)
+  - [版本对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/asset-store/asset-portal/-/tree/dev-branch?ref_type=heads#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+
+### 21. [new-www-tenxcloud](https://gitlabcode.21vianet.com/vnet/aimaas/public-cloud-service/new-www-tenxcloud)
+时速云官网
+
+**前端框架**: react@18, nextjs@13
+
+**UI**: antd@5
+
+**构建工具**: nextjs
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [menu.json](https://gitlabcode.21vianet.com/vnet/aimaas/public-cloud-service/new-www-tenxcloud#publicmenujson)
+  - [构建镜像](https://gitlabcode.21vianet.com/vnet/aimaas/public-cloud-service/new-www-tenxcloud#%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F)
+
+
+### 22. [multicloud/console](https://gitlabcode.21vianet.com/vnet/aimaas/multicloud/console)
+Console for multi-cloud to manage rendering resource, like site、vpc、ecs，etc ...
+
+**前端框架**: react@18, umijs@4
+
+**UI**: antd@5
+
+**构建工具**: umijs@4
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/multicloud/console#%E5%BC%80%E5%8F%91%E6%9E%84%E5%BB%BA)
+  
+### 22. [saas-portal](https://gitlabcode.21vianet.com/vnet/aimaas/multicloud/saas-portal)
+Portal for multi-cloud SaaS management
+
+**前端框架**: react@18, umijs@4
+
+**UI**: antd@5
+
+**构建工具**: umijs@4
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [开发构建](https://gitlabcode.21vianet.com/vnet/aimaas/multicloud/saas-portal#%E5%BC%80%E5%8F%91%E6%9E%84%E5%BB%BA)
+  
+### 23. [mq-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tdsf/ccb/mq-portal)
+ccb MQ Portal
+
+**前端框架**: react@18, umijs@4
+
+**UI**: antd@5
+
+**构建工具**: umijs@4
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [目录结构](https://gitlabcode.21vianet.com/vnet/aimaas/tdsf/ccb/mq-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  
+### 24. [installer-portal](https://gitlabcode.21vianet.com/vnet/aimaas/icm/installer-portal)
+Portal for Installer.
+
+**前端框架**: react@18, umijs@4
+
+**UI**: antd@5
+
+**构建工具**: umijs@4
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [目录结构](https://gitlabcode.21vianet.com/vnet/aimaas/icm/installer-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  
+
+### 24. [ai-deep-learning-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tce/ai-deep-learning-portal)
+Portal for ai-deep-learning.
+
+**前端框架**: react@18, umijs@4
+
+**UI**: antd@4
+
+**构建工具**: umijs@4
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tce/ai-deep-learning-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [目录结构](https://gitlabcode.21vianet.com/vnet/aimaas/icm/ai-deep-learning-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  
+
+### 24. [faas-portal](https://gitlabcode.21vianet.com/vnet/aimaas/tsl/faas-portal)
+联通 faas.
+
+**前端框架**: react@18, nextjs@12
+
+**UI**: antd@4
+
+**构建工具**: nextjs@12
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tsl/faas-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [目录结构](https://gitlabcode.21vianet.com/vnet/aimaas/icm/ai-deep-learning-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
+  
+
+### 25. [telecom-deeplearning-portal](https://gitlabcode.21vianet.com/vnet/aimaas/customization-project/telecom-deeplearning-portal)
+联通深度学习项目.
+
+**前端框架**: react@16, umi@3
+
+**UI**: antd@4
+
+**构建工具**: umi@3
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+  
+
+### 26. [ops-system-portal](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/ops-system-portal)
+系统组件管理项目.
+
+**前端框架**: react@16, umi@3
+
+**UI**: antd@4
+
+**构建工具**: umi@3
+
+**代码检查**: eslint + prettier + husky + lint-staged + stylelint
+
+**其他**: 
+  - [版本对应关系](https://gitlabcode.21vianet.com/vnet/aimaas/tsl/faas-portal#%E7%89%88%E6%9C%AC%E5%88%86%E6%94%AF%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB)
+  - [目录结构](https://gitlabcode.21vianet.com/vnet/aimaas/next-gen/ops-system-portal#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84)
