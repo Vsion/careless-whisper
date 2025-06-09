@@ -79,15 +79,16 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth 400ms;
   padding: 0;
   margin: 0;
 }
 
 html,
 body {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  overflow-x: hidden;
+  scrollbar-gutter: stable; /* 预留滚动条空间，避免布局抖动 */
 }
 
 body {

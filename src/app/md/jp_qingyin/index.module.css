@@ -1,0 +1,22 @@
+.vstable {
+  width: 880px;
+  border-collapse: collapse;
+}
+
+.vstable th, .vstable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  width: 110px;
+}
+
+.vstable th:nth-child(1) {
+  width: 100px;
+}
+
+.vstable thead tr th {
+  text-align: left;
+}
+
+.vstable tr:nth-child(even), .vstable thead tr {
+  background-color: #f2f2f2;
+}

@@ -2,6 +2,22 @@ import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(({ css, token }) => {
   return {
+    layout: {
+      padding: '0 3rem',
+      position: 'relative',
+    },
+    homeanchor: {
+      position: 'fixed',
+      right: 0,
+      top: 100,
+      width: 180
+    },
+    title: {
+      maxWidth: '100%',
+      width: 'var(--max-width)',
+      margin: '0 auto',
+      padding: '68px 0 24px 0',
+    },
     grid: {
       display: 'grid',
       gridTemplateColumns: 'repeat(4, minmax(25%, auto))',
