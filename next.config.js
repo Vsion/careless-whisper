@@ -10,6 +10,9 @@ module.exports = withMDX(withLess({
     process.env.EXPORT === 'true' ? 'export' : undefined,
   // distDir: process.env.TARGET === 'gh-pages' ? 'out' + basePath : undefined,
   // assetPrefix: process.env.TARGET === 'gh-pages' ? basePath + '/' : undefined,
+  images: {
+    unoptimized: process.env.TARGET === 'gh-pages' || process.env.EXPORT === 'true', // 禁用图片优化
+  },
   basePath,
   // Configure `pageExtensions`` to include MDX files
   pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],

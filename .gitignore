@@ -25,6 +25,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# md => json
+/src/app/md/**/content.json
+
 # local env files
 .env*.local
 

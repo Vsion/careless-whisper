@@ -7,15 +7,13 @@ import themeConfig from '@/theme/themeConfig';
 
 export default function Layout({
   children,
-  className,
 }: {
   children: React.ReactNode,
-  className?: string,
 }) {
   return (
     <StyleRegistry>
       <ThemeProvider {...themeConfig}>
-        <App className={className}>{children}</App>
+        <App>{children}</App>
       </ThemeProvider>
     </StyleRegistry>
   )

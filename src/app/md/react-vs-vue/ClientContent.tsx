@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 
-export default function Content({ content }: { content: string }) {
+export default function Content({ content }: { content?: string }) {
   return <>
     <ReactMarkdown>
       {content}
