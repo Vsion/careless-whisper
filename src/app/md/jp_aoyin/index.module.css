@@ -1,0 +1,22 @@
+.markdown-table {
+  width: 480px;
+  border-collapse: collapse;
+}
+
+.markdown-table th, .markdown-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 80px;
+}
+
+.markdown-table th:nth-child(1) {
+  width: 140px;
+}
+
+.markdown-table thead tr th {
+  text-align: left;
+}
+
+.markdown-table tr:nth-child(even), .markdown-table thead tr {
+  background-color: #f2f2f2;
+}

@@ -27,6 +27,7 @@ yarn-error.log*
 
 # md => json
 /src/app/md/**/content.json
+/src/app/md/**/content.json.temp
 
 # local env files
 .env*.local

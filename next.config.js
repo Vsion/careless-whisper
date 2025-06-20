@@ -15,7 +15,7 @@ module.exports = withMDX(withLess({
   },
   basePath,
   // Configure `pageExtensions`` to include MDX files
-  pageExtensions: ['js', 'jsx', 'mdx', 'ts', 'tsx'],
+  pageExtensions: ['js', 'jsx', 'mdx', 'md', 'ts', 'tsx'],
   lessLoaderOptions: {
     lessOptions: {
       javascriptEnabled: true,
