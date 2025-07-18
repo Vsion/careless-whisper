@@ -108,31 +108,49 @@ export default function Index(props: any) {
         </h2>
         <div className={styles.grid}>
           <Link
-            href="/md/jp_qingyin"
+            href="/md/jp/1.qingyin"
             className={styles.card}
           >
             <h2>
-              五十音图(清音、拨音) <span>-&gt;</span>
+              1. 五十音图(清音、拨音) <span>-&gt;</span>
             </h2>
-            <p>rt</p>
+            <p>平假名、片假名和罗马音</p>
           </Link>
           <Link
-            href="/md/jp_zhuoyin"
+            href="/md/jp/2.zhuoyin"
             className={styles.card}
           >
             <h2>
-              浊音、半浊音<span>-&gt;</span>
+              2. 浊音、半浊音<span>-&gt;</span>
             </h2>
-            <p>rt</p>
+            <p>与清音的发音对比</p>
           </Link>
           <Link
-            href="/md/jp_aoyin"
+            href="/md/jp/3.aoyin"
             className={styles.card}
           >
             <h2>
-              拗音<span>-&gt;</span>
+              3. 拗音<span>-&gt;</span>
             </h2>
-            <p>rt</p>
+            <p>构成和读法</p>
+          </Link>
+          <Link
+            href="/md/jp/4.mingci"
+            className={styles.card}
+          >
+            <h2>
+              4. 名词和基本句型...<span>-&gt;</span>
+            </h2>
+            <p>以及助词与表达方式</p>
+          </Link>
+          <Link
+            href="/md/jp/5.dongci"
+            className={styles.card}
+          >
+            <h2>
+              5. 动词的基本型和ます型<span>-&gt;</span>
+            </h2>
+            <p>不同类型动词的变形方式</p>
           </Link>
         </div>
         <h2 className={styles.title} id={'others'}>
