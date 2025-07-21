@@ -152,6 +152,15 @@ export default function Index(props: any) {
             </h2>
             <p>不同类型动词的变形方式</p>
           </Link>
+          <Link
+            href="/md/jp/6.xingrongci"
+            className={styles.card}
+          >
+            <h2>
+              6. 形容词和形容动词<span>-&gt;</span>
+            </h2>
+            <p>以及过去、否定等形式</p>
+          </Link>
         </div>
         <h2 className={styles.title} id={'others'}>
           <Link href={'#others'}>

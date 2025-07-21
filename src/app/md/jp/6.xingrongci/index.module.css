@@ -1,0 +1,11 @@
+.dongci {
+  table {
+    width: 100%;
+    /* th:nth-child(3) {
+      width: 90px;
+    }
+    th:nth-child(5) {
+      width: 120px;
+    } */
+  }
+}
