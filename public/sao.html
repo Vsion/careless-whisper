@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商品价格扫码表</title>
+<style>
+body{font-family:SimHei,sans-serif;padding:10px;font-size:14px;}
+table{width:100%;border-collapse:collapse;margin:0 auto;}
+th,td{border:1px solid #ccc;padding:8px;text-align:center;}
+th{background:#d4d4d4;}
+
+/* 大类灰色行、白色行，不再单行轮换 */
+tr.group-gray td {background:#f0f0f0;}
+tr.group-white td {background:#ffffff;}
+
+/* 强制打印保留背景色 */
+@media print {
+    *{
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+}
+</style>
+</head>
+<body>
+<table>
+  <thead>
+    <tr>
+      <th>扫码</th>
+      <th>商品名</th>
+      <th>类别</th>
+      <th>售价（元）</th>
+      <th>条码后六位</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- 星巴克 整组同色 -->
+    <tr class="group-gray">
+      <td rowspan="3">星巴克星选芝士系列（8元）</td>
+      <td>星巴克星选芝士奶香拿铁</td>
+      <td>饮料-即饮咖啡</td>
+      <td>8</td>
+      <td>270961</td>
+    </tr>
+    <tr class="group-gray">
+      <td>星巴克星选咖啡拿铁</td>
+      <td>饮料-即饮咖啡</td>
+      <td>8</td>
+      <td>270947</td>
+    </tr>
+    <tr class="group-gray">
+      <td>星巴克星选美式</td>
+      <td>饮料-即饮咖啡</td>
+      <td>8</td>
+      <td>271715</td>
+    </tr>
+
+    <!-- 元气森林 整组灰色 -->
+    <tr class="group-white">
+      <td rowspan="4">元气森林白桃（3.8）</td>
+      <td>元气森林爆汁白桃气泡水</td>
+      <td>饮料-气泡水</td>
+      <td>3.8</td>
+      <td>920415</td>
+    </tr>
+    <tr class="group-white">
+      <td>元气森林爆汁葡萄气泡水</td>
+      <td>饮料-气泡水</td>
+      <td>3.8</td>
+      <td>923096</td>
+    </tr>
+    <tr class="group-white">
+      <td>元气森林维C橙子气泡水</td>
+      <td>饮料-气泡水</td>
+      <td>3.8</td>
+      <td>704014</td>
+    </tr>
+    <tr class="group-white">
+      <td>元气森林冰柠可乐气泡水</td>
+      <td>饮料-气泡水</td>
+      <td>3.8</td>
+      <td>7784273</td>
+    </tr>
+
+    <!-- 美汁源 整组白 -->
+    <tr class="group-gray">
+      <td rowspan="3">美汁源果粒橙（2.9）</td>
+      <td>美汁源果粒橙（450毫升）</td>
+      <td>饮料-果汁</td>
+      <td>2.9</td>
+      <td>400051</td>
+    </tr>
+    <tr class="group-gray">
+      <td>美汁源汁汁桃桃（450毫升）</td>
+      <td>饮料-果汁</td>
+      <td>2.9</td>
+      <td>404172</td>
+    </tr>
+    <tr class="group-gray">
+      <td>美汁源红提葡萄（450毫升）</td>
+      <td>饮料-果汁</td>
+      <td>2.9</td>
+      <td>404219</td>
+    </tr>
+
+    <!-- 纳宝帝 整组灰 -->
+    <tr class="group-white">
+      <td rowspan="3">纳宝帝奶酪味（1.9）</td>
+      <td>纳宝帝威化饼干奶酪味</td>
+      <td>零食-饼干</td>
+      <td>1.9</td>
+      <td>537445</td>
+    </tr>
+    <tr class="group-white">
+      <td>纳宝帝威化饼干巧克力味</td>
+      <td>零食-饼干</td>
+      <td>1.9</td>
+      <td>540629</td>
+    </tr>
+    <tr class="group-white">
+      <td>纳宝帝威化饼干草莓味</td>
+      <td>零食-饼干</td>
+      <td>1.9</td>
+      <td>548823</td>
+    </tr>
+
+    <!-- 苏菲 整组白 -->
+    <tr class="group-gray">
+      <td rowspan="2">苏菲安心裤（大包装）</td>
+      <td>苏菲安心裤M（大包装）</td>
+      <td>日化-卫生巾</td>
+      <td>5.8</td>
+      <td>521213</td>
+    </tr>
+    <tr class="group-gray">
+      <td>苏菲安心裤M（方袋）</td>
+      <td>日化-卫生巾</td>
+      <td>5.8</td>
+      <td>550091</td>
+    </tr>
+
+    <!-- 东方树叶 整组灰 -->
+    <tr class="group-white">
+      <td rowspan="2">东方树叶茉莉花茶（6.5）</td>
+      <td>东方树叶茉莉花茶（900毫升）</td>
+      <td>饮料-茶饮</td>
+      <td>6.5</td>
+      <td>598427</td>
+    </tr>
+    <tr class="group-white">
+      <td>东方树叶乌龙茶（900毫升）</td>
+      <td>饮料-茶饮</td>
+      <td>6.5</td>
+      <td>599905</td>
+    </tr>
+
+    <!-- 菊乐 整组白 -->
+    <tr class="group-gray">
+      <td rowspan="2">菊乐酸牛奶250毫升（49.9）</td>
+      <td>菊乐纯牛奶（255克×24盒）</td>
+      <td>饮料-牛奶</td>
+      <td>49.9</td>
+      <td>001013</td>
+    </tr>
+    <tr class="group-gray">
+      <td>菊乐酸牛奶</td>
+      <td>饮料-酸奶</td>
+      <td>49.9</td>
+      <td>000979</td>
+    </tr>
+
+    <!-- 维怡 整组灰 -->
+    <tr class="group-white">
+      <td rowspan="1">维怡960毫升绿瓶（8）</td>
+      <td>维怡960毫升绿瓶</td>
+      <td>饮料-植物蛋白</td>
+      <td>8</td>
+      <td>473397</td>
+    </tr>
+
+    <!-- 大类 整组白 8行全部同色 -->
+    <tr class="group-gray">
+      <td rowspan="13">糯玉米碎（10 元/kg）</td>
+      <td>金晔好山楂棒</td>
+      <td>零食-糖果</td>
+      <td>1</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>男士拖鞋</td>
+      <td>日化-家居</td>
+      <td>8.8</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>女士拖鞋</td>
+      <td>日化-家居</td>
+      <td>6.8</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>盆</td>
+      <td>日化-家居</td>
+      <td>5.8</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>牙缸</td>
+      <td>日化-洗漱</td>
+      <td>2.8</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>帝兰圣雪抹茶口味冰淇淋80克</td>
+      <td>冷饮-冰淇淋</td>
+      <td>8.9</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>帝兰圣雪香草口味冰淇淋80克</td>
+      <td>冷饮-冰淇淋</td>
+      <td>8.9</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>绿色心情红沙沙</td>
+      <td>冷饮-冰淇淋</td>
+      <td>2.5</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>丘比沙拉酱200g</td>
+      <td>调料-酱料</td>
+      <td>2.5</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>喜力经典</td>
+      <td>酒水-啤酒</td>
+      <td>6.9</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>1664桃红</td>
+      <td>酒水-果啤</td>
+      <td>9.9</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>可漾红豆薏米水 500ml</td>
+      <td>饮料-养生水</td>
+      <td>3.9</td>
+      <td></td>
+    </tr>
+    <tr class="group-gray">
+      <td>六个核桃精研型低糖核桃乳240ml*20</td>
+      <td>饮料-植物蛋白</td>
+      <td>76</td>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
+</body>
+</html>
