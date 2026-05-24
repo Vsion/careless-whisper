@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>雪糕冰淇淋价格表</title>
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #eee; }
+body {
+  font-family: "Microsoft YaHei", "Noto Sans CJK SC", "SimHei", Arial, sans-serif;
+  color: #111;
+}
+@page { size: A4 portrait; margin: 6mm; }
+
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 10px auto;
+  padding: 6mm;
+  background: #fff;
+  page-break-after: always;
+}
+.page:last-child { page-break-after: auto; }
+
+.menu {
+  height: 273mm;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3mm 3.5mm;
+  align-content: stretch;
+}
+
+.item {
+  border: 2.2pt solid #111;
+  border-radius: 3.2mm;
+  padding: 2mm 2.4mm;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 23mm;
+  gap: 2mm;
+  align-items: center;
+  min-height: 19.2mm;
+  break-inside: avoid;
+}
+
+.name {
+  font-size: 14.6pt;
+  line-height: 1.13;
+  font-weight: 650;
+  letter-spacing: 0.08mm;
+  word-break: break-all;
+}
+
+.name strong {
+  font-size: 1.22em;
+  font-weight: 950;
+  letter-spacing: 0.12mm;
+}
+
+.price {
+  text-align: right;
+  white-space: nowrap;
+  color: #d50000;
+  font-weight: 950;
+  line-height: 0.95;
+}
+
+.price span {
+  font-size: 27pt;
+  letter-spacing: -0.4mm;
+}
+
+.price b {
+  font-size: 12pt;
+  margin-left: 0.3mm;
+  font-weight: 900;
+}
+
+@media print {
+  html, body { background: #fff; }
+  .page { margin: 0; }
+}
+</style>
+</head>
+<body>
+
+    <section class="page">
+      <main class="menu">
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛</strong>绿色心情<strong>绿莎莎</strong>绿豆口味雪糕 [70g]</div>
+            <div class="price"><span>2.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">绿色心情<strong>红莎莎</strong>雪糕 55g×40支</div>
+            <div class="price"><span>2.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">绿色心情<strong>花生牛乳</strong>雪糕 70g×40支</div>
+            <div class="price"><span>2.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛冰+海盐柠檬</strong>口味雪泥 85g</div>
+            <div class="price"><span>2.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>冰+芒果</strong>口味雪泥75g</div>
+            <div class="price"><span>2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>冰+蓝莓酸奶</strong>口味棒冰70g</div>
+            <div class="price"><span>1.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>冰+四果奇冰棒</strong>冰23g×4</div>
+            <div class="price"><span>2.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>冰+整支菠萝</strong>雪泥75g×40支</div>
+            <div class="price"><span>2.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>随变旋顶杯酸奶蓝莓</strong>口味雪糕115g×12杯</div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>随变巧巧满贯</strong>巧克力冰淇淋75g×35支</div>
+            <div class="price"><span>4</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>随变脆</strong>：<strong>淬芯布朗尼</strong>口味冰淇淋78g×20支</div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>随变经典咖啡</strong>口味冰淇淋75g×45支</div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛随变</strong>随芯<strong>脆脆饼巧克力</strong>口味雪糕70g</div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛随变</strong>随芯果<strong>蓝莓橙子</strong>口味雪糕75g</div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛酷爱纯脆</strong>草莓香草45g</div>
+            <div class="price"><span>1.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛三色杯</strong>雪糕</div>
+            <div class="price"><span>3</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛香雪杯</strong>奶油味雪糕145g</div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛火炬香草咖啡</strong>口味冰淇淋80g</div>
+            <div class="price"><span>2.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛优选牛奶味奶提子</strong>雪糕65g</div>
+            <div class="price"><span>1.8</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>冰+食用冰</strong>160g×24杯</div>
+            <div class="price"><span>2.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛纯！牛奶味</strong>冰淇淋65g×40支</div>
+            <div class="price"><span>2.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛奶皮子酸奶味</strong>雪糕70g×40支</div>
+            <div class="price"><span>2.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利小雪生</strong></div>
+            <div class="price"><span>2.4</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">德华<strong>一串葡萄</strong>雪糕</div>
+            <div class="price"><span>2.9</span><b>元</b></div>
+          </div>
+        
+      </main>
+    </section>
+    
+    <section class="page">
+      <main class="menu">
+        
+          <div class="item">
+            <div class="name"><strong>伊利巧乐兹经典巧脆棒</strong>雪糕</div>
+            <div class="price"><span>3.8</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">康怡<strong>方糕红豆糯米</strong>口味雪糕</div>
+            <div class="price"><span>2.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>迷你可爱多甜筒蓝莓草莓口味冰淇淋</strong></div>
+            <div class="price"><span>14.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">大桥道<strong>滋芯大香香草朗姆</strong>口味</div>
+            <div class="price"><span>1.8</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">南冰<strong>茶香绿豆</strong>冰糕</div>
+            <div class="price"><span>0.8</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利臻巧MAX</strong>牛奶巧克力雪糕</div>
+            <div class="price"><span>0.99</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">德美<strong>脆香米小熊棒棒</strong>香草味冰淇淋</div>
+            <div class="price"><span>6.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>梦龙16</strong>香草口味冰淇淋</div>
+            <div class="price"><span>7.8</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">而米<strong>冻芒果</strong></div>
+            <div class="price"><span>3.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>小布丁</strong>雪糕</div>
+            <div class="price"><span>0.4</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利冰工厂冰片蜜桃</strong>棒冰</div>
+            <div class="price"><span>1.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>巧乐兹芋泥糯丝丝</strong>雪糕</div>
+            <div class="price"><span>3.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利巧乐兹四个圈</strong>奶巧克力味</div>
+            <div class="price"><span>2.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利心情</strong>雪糕</div>
+            <div class="price"><span>1.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛玉米棒</strong></div>
+            <div class="price"><span>1.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">奥雪<strong>大冰桶</strong>甜橙冰棍</div>
+            <div class="price"><span>2.8</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">康怡<strong>东北奶糕</strong>草原牛奶味</div>
+            <div class="price"><span>2.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name">山城<strong>老冰棍</strong></div>
+            <div class="price"><span>0.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利奶皮子</strong>酸奶雪糕</div>
+            <div class="price"><span>2.4</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>巧乐兹香草巧克力口味脆筒</strong></div>
+            <div class="price"><span>3.5</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>伊利苦咖啡</strong>雪糕</div>
+            <div class="price"><span>2.4</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>和路雪可爱多巧克力甜筒</strong></div>
+            <div class="price"><span>3.9</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>蒙牛随变经典香草</strong>雪糕</div>
+            <div class="price"><span>3.2</span><b>元</b></div>
+          </div>
+        
+          <div class="item">
+            <div class="name"><strong>旺旺碎碎冰</strong></div>
+            <div class="price"><span>0.99</span><b>元</b></div>
+          </div>
+        
+      </main>
+    </section>
+    
+</body>
+</html>
